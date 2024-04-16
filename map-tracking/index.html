@@ -13,8 +13,17 @@
         const start = document.querySelector("#start");
         const stop = document.querySelector("#stop");
 
+        // start.addEventListener("click", () => {
+        //     navigator.geolocation.getCurrentPosition(
+        //         data => {
+        //             console.log(data);
+        //         },
+        //         error => console.log(error)
+        //     );
+        // });
+
         start.addEventListener("click", () => {
-            navigator.geolocation.getCurrentPosition(
+            navigator.geolocation.watchPosition(
                 data => {
                     console.log(data);
                 },
